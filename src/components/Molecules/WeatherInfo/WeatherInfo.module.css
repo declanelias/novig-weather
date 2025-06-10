@@ -1,0 +1,26 @@
+.weatherInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.bottomSection {
+    height: 100%;
+    display: flex;
+}
+
+.imgContainer {
+    flex: 1;
+}
+
+.weatherText {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

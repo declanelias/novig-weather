@@ -1,0 +1,18 @@
+.weatherDisplay {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    display: inline-flex;
+}
+
+.loading {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.timeOfDay {
+    text-align: center;
+}

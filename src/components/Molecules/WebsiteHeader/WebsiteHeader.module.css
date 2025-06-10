@@ -1,0 +1,20 @@
+.left {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+}
+
+.right {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+}
+
+.right span {
+    margin-left: 2rem;
+    cursor: pointer;
+}

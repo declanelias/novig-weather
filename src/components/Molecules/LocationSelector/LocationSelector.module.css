@@ -1,0 +1,65 @@
+.locationContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;    /* vertical center */
+}
+
+.loadingText {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.imgContainer {
+    display: block;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* Style the Combobox container */
+[role="combobox"] {
+    border: none;
+    padding: 8px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    outline: none;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+/* Style the Combobox input */
+[role="combobox"] input {
+    padding: 8px;
+    background-color: transparent;
+}
+
+/* Style the Combobox popover */
+[role="listbox"] {
+    border-radius: 4px;
+    margin-top: 4px;
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-left: 0;
+}
+
+/* Style the Combobox options */
+[role="option"] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+[role="option"][aria-selected="true"] {
+    background-color: #e6f7ff;
+}
+
+[data-reach-combobox] {
+    width: 100%;
+}

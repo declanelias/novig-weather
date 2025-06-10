@@ -1,0 +1,23 @@
+.weatherTemplate {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.headerBox {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 10%;
+}
+
+.separator {
+    height: 1px;
+    background-color: black;
+    margin: 0;
+}
+
+.carouselBox {
+    height: 100%;
+}
