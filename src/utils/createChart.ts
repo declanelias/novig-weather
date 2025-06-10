@@ -83,8 +83,8 @@ export const createChart = (
                         text: "Time",
                     },
                     ticks: {
-                        callback: (index: number) => {
-                            const hour = parseInt(labels[index], 10);
+                        callback: (tickValue: string | number) => {
+                            const hour = typeof tickValue === "string" ? parseInt(tickValue, 10) : tickValue;
                             const period = hour >= 12 ? "PM" : "AM";
                             const formattedHour = hour % 12 || 12;
                             return `${formattedHour}:00 ${period}`;

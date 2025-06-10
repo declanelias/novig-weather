@@ -1,7 +1,7 @@
 import styles from './Header.module.css';
 import { LocationSelector } from "../../Molecules/LocationSelector";
 import { DAYS_OF_WEEK, TIME_OF_DAY } from "../../../constants/constants.ts";
-import Dropdown from "../../Atoms/Dropdown/Dropdown.tsx";
+import { Dropdown } from "../../Atoms/Dropdown";
 import {useWeatherContext} from "../../../context/WeatherContext.tsx";
 import { WiTime3 } from "weather-icons-react";
 

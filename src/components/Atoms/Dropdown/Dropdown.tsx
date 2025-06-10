@@ -12,7 +12,7 @@ interface DropdownProps {
     label: string;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ options, onChange, value, label }) => {
+export const Dropdown: React.FC<DropdownProps> = ({ options, onChange, value, label }) => {
     return (
         <Listbox aria-labelledby={label} defaultValue={value} onChange={onChange}>
             <ListboxPopover>
@@ -27,5 +27,3 @@ const Dropdown: React.FC<DropdownProps> = ({ options, onChange, value, label }) 
         </Listbox>
     );
 };
-
-export default Dropdown;
