@@ -10,8 +10,7 @@ export const WeatherCarousel: React.FC = () => {
     const isMobile = useIsMobile();
     const [showNextWeek, setShowNextWeek] = useState(false);
 
-    const thisDate: Date = getNextDateForDay(new Date(), dayOfWeek);
-    const nextDate: Date = getNextDateForDay(thisDate, dayOfWeek);
+    const {thisDate, nextDate} = getNextDatesForDay(dayOfWeek);
 
     if (!latLng) {
         return (
@@ -86,11 +85,20 @@ export const WeatherCarousel: React.FC = () => {
     );
 };
 
-const getNextDateForDay = (currentDate: Date, targetDay: DayOfWeek): Date => {
+const getNextDatesForDay = (
+    targetDay: DayOfWeek
+): { thisDate: Date; nextDate: Date } => {
+
+    const currentDate = new Date();
+
     const currentDayIndex = currentDate.getDay();
     const targetDayIndex = DAYS_OF_WEEK.indexOf(targetDay);
-    const daysUntilNext = (targetDayIndex - currentDayIndex + 7) % 7 || 7;
+    const daysUntilThis = (targetDayIndex - currentDayIndex + 7) % 7;
+    const daysUntilNext = daysUntilThis + 7;
+    const thisDate = new Date(currentDate);
+    thisDate.setDate(currentDate.getDate() + daysUntilThis);
+
     const nextDate = new Date(currentDate);
     nextDate.setDate(currentDate.getDate() + daysUntilNext);
-    return nextDate;
+    return {thisDate, nextDate};
 };
